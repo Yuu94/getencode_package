@@ -27,10 +27,9 @@ def getEncode(path, encType='default'):
         encType = encType.split(' ')
 
     for enc in encType:
-        # print(enc)
         with open(path, encoding=enc) as f:
             try:
-                fp = f.read()
+                f = f.read()
             except UnicodeDecodeError:
                 continue
         return enc
@@ -38,7 +37,7 @@ def getEncode(path, encType='default'):
 if __name__ == '__main__':
     # How to use
     # Load file(path:./)
-    fileList = glob.glob('./file/*')
+    fileList = glob.glob('./*')
 
     for path in fileList:
         # Use functions
