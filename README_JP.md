@@ -1,5 +1,4 @@
-(名前?)
-Character code Confirmation
+# Character code Confirmation
 
 ## 概要
 - 'path'に指定したファイルの文字コードを返却するパッケージ(モジュール)
@@ -13,9 +12,8 @@ Character code Confirmation
 
 ## 使い方
 ### 確認する文字コードの指定をしない場合
-この場合、指定したファイルを以下の文字コードで開くことができるか
-試し、結果を返却します。
-'ascii euc-jp iso2022-jp iso2022_jp_2 shift_jis utf-8 utf_16_le cp932'
+- 指定したファイルを以下の文字コードで開くことができるか試し、結果を返却します。
+- 'ascii euc-jp iso2022-jp iso2022_jp_2 shift_jis utf-8 utf_16_le cp932'
 上記の文字コードに該当しない場合は、'None'を返却します。
 ```
 from getencode import getenc
@@ -24,10 +22,9 @@ enc = getenc.getEncode(filePath)
 ```
 
 ### 確認する文字コードを指定する場合
-独自で文字コードを指定する場合、文字コード一覧を引数に渡してください。
-文字コードの間はスペースで区切ってください。
-引数に使用できる文字コードの一覧は、getencode/getenc.pyにコメントで
-記述しています。
+- 独自で文字コードを指定する場合、文字コード一覧を引数に渡してください。
+- 文字コードの間はスペースで区切ってください。
+- 引数に使用できる文字コードの一覧は、getencode/getenc.pyにコメントで記述しています。
 ```
 from getencode import getenc
 
@@ -44,7 +41,7 @@ python3 getenc.py
 ```
 
 ## 具体例
-複数のCSVファイルをオープンしたいが、それぞれの文字コートが異なる場合
+- 複数のCSVファイルをオープンしたいが、それぞれの文字コートが異なる場合
 ```
 import glob
 import csv
